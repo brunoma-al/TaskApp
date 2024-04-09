@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bruno.android.taskapp.R
 import com.bruno.android.taskapp.databinding.FragmentFormTaskBinding
+import com.bruno.android.taskapp.util.initToolbar
 
 class FormTaskFragment : Fragment() {
 
@@ -19,4 +20,10 @@ class FormTaskFragment : Fragment() {
         _binding = FragmentFormTaskBinding.inflate(inflater, container, false)
         return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initToolbar(binding.toolbar)
+    }
+
 }
